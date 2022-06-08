@@ -117,7 +117,7 @@ function connect(){
 //resize event
 window.addEventListener('resize', function(){
     canvas.width = innerWidth;
-    canvas.height = this.innerHeight;
+    canvas.height = innerHeight;
     mouse.radius = 3 * 3;
     init();
 });
