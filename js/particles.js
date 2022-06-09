@@ -1,10 +1,13 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext('2d');
 let body = document.body;
-canvas.width = Math.max(body.offsetWidth);
-canvas.height = Math.max(body.offsetHeight);
+
+body.offsetHeight = window.innerHeight;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 let particlesArray;
+
 
 //get mouse position
 let mouse = {
@@ -117,13 +120,14 @@ function connect(){
 }
 //resize event
 window.addEventListener('resize', function(){
-    canvas.width = Math.max(body.offsetWidth);
-    canvas.height = Math.max(body.offsetHeight);
+    body.offsetHeight = window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     mouse.radius = 3 * 3;
     init();
     test(window.innerWidth, window.innerHeight, body.offsetWidth, body.offsetHeight, canvas.width, canvas.height);
 });
-
+//init canvas
 //test
 function test(windowWidth, windowHeight, bodyWidth, bodyHeight, canvasW, canvasH){
     let testP = document.getElementsByClassName('testp');
