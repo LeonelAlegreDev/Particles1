@@ -24,7 +24,6 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,15 +56,4 @@ button{
 a{
     text-decoration: none;
     color: inherit;
-}
-.test{
-    position:absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    padding: 15px;
-    margin: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.85);
 }
