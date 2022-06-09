@@ -1,7 +1,8 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+let body = document.body;
+canvas.width = Math.max(body.offsetWidth);
+canvas.height = Math.max(body.offsetHeight);
 
 let particlesArray;
 
@@ -116,8 +117,8 @@ function connect(){
 }
 //resize event
 window.addEventListener('resize', function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = Math.max(body.offsetWidth);
+    canvas.height = Math.max(body.offsetHeight);
     mouse.radius = 3 * 3;
     init();
 });
