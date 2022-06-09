@@ -1,8 +1,7 @@
-const navContainer = document.getElementById('navContainer');
+const canvasContainer = document.getElementById('canvasContainer');
 
-navContainer.style.transform = "translate(-50%, -50%)";
+canvasContainer.style.height = window.innerHeight + "px";
 
 window.addEventListener('resize', function(){
-    navContainer.style.transform = "translate(-50%, -50%)";
-
+    canvasContainer.style.height = window.innerHeight + "px";
 });
