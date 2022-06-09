@@ -18,6 +18,8 @@ body{
 
 /* Main */
 #canvasContainer{
+    width: 100%;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
