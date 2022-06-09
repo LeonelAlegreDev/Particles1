@@ -2,7 +2,7 @@ const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext('2d');
 let body = document.body;
 
-body.offsetHeight = window.innerHeight;
+body.style.height = window.innerHeight;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
