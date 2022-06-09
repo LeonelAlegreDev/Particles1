@@ -120,7 +120,7 @@ function connect(){
 }
 //resize event
 window.addEventListener('resize', function(){
-    body.offsetHeight = window.innerHeight;
+    body.style.height = window.innerHeight;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     mouse.radius = 3 * 3;
