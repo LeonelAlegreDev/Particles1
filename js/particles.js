@@ -121,7 +121,36 @@ window.addEventListener('resize', function(){
     canvas.height = Math.max(body.offsetHeight);
     mouse.radius = 3 * 3;
     init();
+    test(window.innerWidth, window.innerHeight, body.offsetWidth, body.offsetHeight, canvas.width, canvas.height);
 });
 
+//test
+function test(windowWidth, windowHeight, bodyWidth, bodyHeight, canvasW, canvasH){
+    let testP = document.getElementsByClassName('testp');
+    for(let i = 0; i < testP.length; i++)
+    {
+        switch(i){
+            case 0:
+                testP[i].innerHTML = "window width: " + windowWidth;
+                break;
+            case 1:
+                testP[i].innerHTML = "window height: " + windowHeight;
+                break;
+            case 2:
+                testP[i].innerHTML = "body width: " + bodyWidth;
+                break;
+            case 3: 
+                testP[i].innerHTML = "body height: " + bodyHeight;
+                break;
+            case 4: 
+                testP[i].innerHTML = "canvas width: " + canvasW;
+                break;
+            case 5:
+                testP[i].innerHTML = "canvas height: " + canvasH;
+                break
+        }
+    }
+}
+test(window.innerWidth, window.innerHeight, body.offsetWidth, body.offsetHeight, canvas.width, canvas.height);
 init();
 animate();
